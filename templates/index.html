@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>English to Kannada Translator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding-top: 100px;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>English → Kannada Translator</h1>
+
+  <form method="POST">
+    <textarea name="text" placeholder="Type English text here..."></textarea><br>
+    <button type="submit">Translate</button>
+  </form>
+
+  {% if translated_text %}
+    <div class="result">
+      <strong>Kannada:</strong> {{ translated_text }}
+    </div>
+  {% endif %}
+</body>
+</html>
+
